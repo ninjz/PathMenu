@@ -228,10 +228,6 @@ public class PathMenu: UIView, PathMenuItemDelegate {
             angle = 0
         }
         
-        UIView.animateWithDuration(Double(startMenuAnimationDuration!), animations: { [weak self] () -> Void in
-            self?.startButton?.transform = CGAffineTransformMakeRotation(angle)
-        })
-        
         if timer == nil {
             timer = NSTimer.scheduledTimerWithTimeInterval(Double(timeOffset!), target: self, selector: selector, userInfo: nil, repeats: true)
             if let timer = timer {
